@@ -22,6 +22,7 @@ public class Main {
                 case 1:
                     cliente.registrarCliente(scanner);
                     break;
+
                 case 2:
                     if(cliente.nome == null){
                         System.out.println("Cadastre-se primeiro!");
@@ -31,32 +32,24 @@ public class Main {
                     break;
 
                 case 3:
-                    if(!cliente.logado){
-                        System.out.println("Efetue o login primeiro!");
-                        break;
-                    }
+                    if(!Verificacao.verificarLogin(cliente)) break;
                     System.out.println("Seu saldo é: " + cliente.saldo);
                     break;
 
                 case 4:
-                    if(!cliente.logado){
-                        System.out.println("Efetue o login primeiro!");
-                        break;
-                    }
+                    if(!Verificacao.verificarLogin(cliente))break;
                     System.out.println("Quanto deseja depositar? ");
                     long deposito = scanner.nextLong();
                     cliente.depositar(deposito);
                     break;
 
                 case 5:
-                    if(!cliente.logado){
-                        System.out.println("Efetue o login primeiro!");
-                        break;
-                    }
+                    if(!Verificacao.verificarLogin(cliente)) break;
                     System.out.println("Quanto deseja sacar? ");
                     long saque = scanner.nextLong();
                     cliente.sacar(saque);
                     break;
+
                 case 6:
                     System.out.println("Volte sempre!");
                     break;
