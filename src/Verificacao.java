@@ -3,6 +3,7 @@ public class Verificacao {
         if(!cliente.logado){
             System.out.println("Efetue o login primeiro!");
             return false;
+            
         }
         return true;
     }
