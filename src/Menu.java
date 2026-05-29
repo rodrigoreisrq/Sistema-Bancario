@@ -1,6 +1,6 @@
 public class Menu {
     static void mostrarMenu(){
-        System.out.println("Bem-vindo ao Bank Reis: Qual operação deseja realizar?");
+        System.out.println("Bem-vindo ao Bank Reis:\n Qual operação deseja realizar?");
         System.out.println("1 - Criar conta ");
         System.out.println("2 - Fazer login ");
         System.out.println("3 - Ver Saldo ");
